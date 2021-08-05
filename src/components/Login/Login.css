@@ -45,7 +45,7 @@ input:focus{
     margin: 10px;
 }*/
 
-button {
+#buttonLogin {
     width: 18%;
     margin: 10px;
     padding: 20px;
