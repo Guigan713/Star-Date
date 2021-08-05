@@ -14,9 +14,12 @@
     border-radius: 10px;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    background-color: transparent;
 }
 
 .characterImg img{
+    object-position: top;
     width: 90%;
     height: 90%;
     border-radius: 10px;
