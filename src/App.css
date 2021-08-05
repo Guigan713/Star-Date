@@ -22,5 +22,5 @@ h2{
 body{
     font-family: 'exo2';
     background-image: linear-gradient(rgba(0, 5, 20, 0.5), rgba(223, 223, 179, 0.2)), url("../src/assets/background_star.PNG");
-    height:80vh;
+    height:100vh;
 }

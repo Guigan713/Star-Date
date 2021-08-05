@@ -32,12 +32,16 @@
 .startBtn{
     background-color: black;
     color: goldenrod;
+    width: 20%;
+    Height: 30px;
+    font-size: 22px;
+    margin: 20px;
 }
 
 button {
     width: 25%;
     padding: 10px;
-    background-color: #635BAC;
+    background-color: transparent;
 }
 
 
@@ -46,7 +50,6 @@ button:focus{
     width: 30%;
     transform: scale(1);
     box-shadow: 0px 0px 40px 4px  #a425f83f;
-    border-radius: 50%;
 }
 
 img {
