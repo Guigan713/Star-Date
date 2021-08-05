@@ -3,13 +3,13 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 30px;
+    height: 60px;
     position: relative;
 }
 
 .buttonLogo {
-    width: 15px;
-    height: 15px;
+    width: 40px;
+    height: 40px;
     padding: 5px;
     margin: 5px;
 }
