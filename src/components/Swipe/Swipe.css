@@ -10,7 +10,7 @@
     display: flex;
     width: 400px;
     height: 400px;
-    background-color: pink;
+    background-color: transparent;
     border-radius: 10px;
     justify-content: center;
     align-items: center;
@@ -19,15 +19,36 @@
 .characterImg img{
     width: 90%;
     height: 90%;
+    border-radius: 10px;
 }
 
 .swipeBtn{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+
 }
 
 .startBtn{
     background-color: black;
     color: goldenrod;
+}
+
+button {
+    width: 25%;
+    padding: 10px;
+    background-color: transparent;
+}
+
+
+button:focus{
+    transition: 0.5s;
+    width: 30%;
+    transform: scale(1);
+    box-shadow: 0px 0px 40px 4px  #a425f83f;
+    border-radius: 50%;
+}
+
+img {
+    width: 35px;
 }

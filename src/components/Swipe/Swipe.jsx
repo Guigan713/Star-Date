@@ -1,6 +1,9 @@
 import { React, useState, useEffect } from "react";
 import axios from 'axios';
 
+import Cross from './times-solid.svg'
+import Heart from './heartbeat-solid.svg'
+
 import './Swipe.css';
 
 const Swipe = () => {
@@ -56,8 +59,8 @@ const Swipe = () => {
                         </div>
                         <div className = "characterName">{char.name}</div>
                         <div className="swipeBtn">
-                            <button onClick={handleLeftClick}>Gauche</button>
-                            <button onClick={(e)=>handleRightClick(e,char.id)}>Droite</button>
+                            <button onClick={handleLeftClick}><img src={Cross} alt="croix"></img></button>
+                            <button onClick={(e)=>handleRightClick(e,char.id)}><img src={Heart} alt="coeur"></img></button>
                         </div>
                     </div>
                     )
