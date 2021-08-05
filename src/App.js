@@ -2,10 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Login from './components/Login';
+import MatchCard from './components/MatchCard';
 import Swipe from './components/Swipe';
-
-import React from 'react';
-
 
 import './App.css';
 
@@ -24,9 +22,9 @@ function App() {
         {/* <Route path="/matches">
           <MatchList />
         </Route> */}
-        {/* <Route path="/matches/:id">
+        <Route path="/matches/:id">
           <MatchCard />
-        </Route> */}
+        </Route>
         {/* <Route path="/messages">
           <MessageList />
         </Route> */}

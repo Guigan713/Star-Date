@@ -1,6 +1,5 @@
 import React from "react";
 import { useState, useEffect } from "react";
-
 import axios from 'axios';
 
 import './Swipe.css';
@@ -10,6 +9,7 @@ const Swipe = () => {
     // Initial State
     const [charList, setCharList] = useState([]);
     const [randomId, setRandomId] = useState("");
+    const [matchIdList, setMatchIdList] = useState([]);
 
     useEffect(() => {
         // Get character list from API
@@ -25,30 +25,45 @@ const Swipe = () => {
         getCharList()
     }, [randomId])
 
-    const handleClick = () => {
+    // Get a random number between 1 and 87
+    const getANumber = () => {
         let randomInt = Math.floor(Math.random() * 87) + 1;
-        // console.log(randomInt)
+            randomInt = 17 ? randomInt = Math.floor(Math.random() * 87) + 1 : setRandomId(randomInt); // Id 17 does not exist
         setRandomId(randomInt)
+    }
+
+    // Response for Left click
+    const handleLeftClick = () => {
+        getANumber()
+    }
+    
+    // Response for Right click
+    const handleRightClick = (e,id) => {
+        setMatchIdList([...matchIdList,id])
+        getANumber()
     }
 
     return (
         <div className ="swipe">
+            {matchIdList.length > 0 && console.log("MyMatchList", matchIdList)}
             <h1>Swipe</h1>
-            <div className ="characterImg"></div>
-            <div className = "characterName">
-                {charList &&
-                    charList
-                    .filter( (char, index) => char.id == randomId)
-                    .map( (char, index) => <div key={index}>{char.id}:{char.name}</div>)
+            {charList &&
+                charList
+                .filter( (char, index) => char.id === randomId)
+                .map( (char, index) =>
+                    <div key={index}>
+                        <div className = "characterImg">
+                            <img src={char.image} alt={char.name}/>
+                        </div>
+                        <div className = "characterName">{char.name}</div>
+                        <div className="swipeBtn">
+                            <button onClick={handleLeftClick}>Gauche</button>
+                            <button onClick={(e)=>handleRightClick(e,char.id)}>Droite</button>
+                        </div>
+                    </div>
+                    )
                 }
-            </div>
-            <div className="swipeBtn">
-                <button>Left</button>
-                <button>Right</button>
-            </div>
-
-            <button onClick={handleClick}>New character</button>
-
+            <button className="startBtn" onClick={handleLeftClick}>Start</button>
         </div>
     );
 }

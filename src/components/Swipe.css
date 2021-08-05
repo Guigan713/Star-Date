@@ -7,14 +7,27 @@
 }
 
 .characterImg{
+    display: flex;
     width: 400px;
     height: 400px;
     background-color: pink;
     border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.characterImg img{
+    width: 90%;
+    height: 90%;
 }
 
 .swipeBtn{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+
+.startBtn{
+    background-color: black;
+    color: goldenrod;
 }
