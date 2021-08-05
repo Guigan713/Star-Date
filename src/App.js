@@ -5,6 +5,7 @@ import Login from './components/Login';
 import Swipe from './components/Swipe';
 import Navbar from './components/Navbar/Navbar'
 import MatchCard from './components/MatchCard'
+import MessageCard from './components/MessageCard'
 
 
 import './App.css';
@@ -30,9 +31,9 @@ function App() {
         {/* <Route path="/messages">
           <MessageList />
         </Route> */}
-        {/* <Route path="/messages/:match">
+         <Route path="/messages/:match">
           <MessageCard />
-        </Route> */}
+        </Route> 
       </Switch>
     </Router>
     </div>

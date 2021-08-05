@@ -1,13 +1,25 @@
 .cardContainer {
     display : flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 50px;
+    margin: 10px;
 }
 
 .imageCard {
     width: 450px;
-    align-self: center;
     margin-top: 50px;
+    border-radius: 9px;
+}
+
+.card {
+    display : flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid #000;
+    height: 350px; 
+    padding: 20px;
     border-radius: 9px;
 }
 
@@ -21,5 +33,17 @@
 }
 
 h1 {
+    align-self: center;
+}
+
+
+.buttonCard {
+    width: 120px;
+    font-size: 18px;
+    border-radius: 6px;
+    margin: 15px;
+}
+
+.button {
     align-self: center;
 }
