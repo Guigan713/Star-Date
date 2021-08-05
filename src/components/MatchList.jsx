@@ -1,10 +1,8 @@
-import axios from 'axios'
-import React from 'react'
-import { useState, useEffect } from 'react';
+import { React, useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
+import axios from 'axios'
 
 import MatchCard from './components/MatchCard'
-
 
 const MatchList = () => {
     const [listMatch, setListMatch] =useState([]);
@@ -23,13 +21,11 @@ const MatchList = () => {
         getMatchList()
     }, [id])
 
-
-
     return (
         <div className="matchListContainer">
             <MatchCard name={listMatch}/>
         </div>
     );
 }
- 
+
 export default MatchList;

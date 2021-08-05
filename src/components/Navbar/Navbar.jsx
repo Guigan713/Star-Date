@@ -14,17 +14,17 @@ const Navbar = () => {
             <NavLink to="/">
                 <img className="buttonLogo" src={Fire} alt="login" />
             </NavLink>
-            <NavLink to="/Swipe">
+            <NavLink to="/swipe">
                 <img className="buttonLogo" src={Coeur} alt="Swipe" />
             </NavLink>
-            <NavLink to="/MatchList">
+            <NavLink to="/matches">
                 <img className="buttonLogo" src={Star} alt="match list" />
             </NavLink>
-            <NavLink to="/Message List">
+            <NavLink to="/messages">
                 <img className="buttonLogo" src={Inbox} alt="Message List" />
             </NavLink>
         </div>
     );
 }
- 
+
 export default Navbar;

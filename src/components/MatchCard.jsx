@@ -1,32 +1,25 @@
 import { useState, useEffect } from 'react'
+import { Link, useParams } from 'react-router-dom';
 import axios from 'axios'
-import { useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 
 import './MatchCard.css'
 
 const MatchCard = () => {
-    const [cardMatch, setCardMatch] =useState([]);
     const { id } = useParams();
-    const [messageClick, setMessageClick] = useState("")
+    const [cardMatch, setCardMatch] =useState([]);
 
     useEffect(() => {
         const getMatchCard = () => {
-
-            axios.get(`https://miadil.github.io/starwars-api/api/id/${id}.json`)
-            .then(response => response.data)
-            .then(data => {
-                console.log(data)
-                setCardMatch(data);
-            })
+            axios
+                .get(`https://miadil.github.io/starwars-api/api/id/${id}.json`)
+                .then(response => response.data)
+                .then(data => {
+                    console.log(data)
+                    setCardMatch(data);
+                })
         }
         getMatchCard()
     }, [id])
-
-    const handleClick = () => {
-        setMessageClick(messageClick)
-    }
-
 
     return (
         <div className="cardContainer">
@@ -39,12 +32,12 @@ const MatchCard = () => {
             <p className="cardInfos">species: {cardMatch.species}</p>
             <p className="cardInfos">eye color: {cardMatch.eyeColor}</p>
             <p className="cardInfos">skin color: {cardMatch.skinColor}</p>
-            <Link to="/messages/:match" className="button">
-            <button className="buttonCard" onClick={handleClick}>send a message</button>
+            <Link to={`/messages/${cardMatch.id}`} className="button">
+                <button className="buttonCard">send a message</button>
             </Link>
             </div>
         </div>
     );
 }
- 
+
 export default MatchCard;
