@@ -5,5 +5,5 @@ const MessageCard = () => {
         </div>
     );
 }
- 
+
 export default MessageCard;
