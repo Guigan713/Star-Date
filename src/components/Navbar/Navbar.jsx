@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import Fire from './fire-solid.svg'
 import Coeur from './love.svg'
-import Inbox from './inbox-solid.svg'
+import Inbox from './message.svg'
 import Star from './star-regular.svg'
 
 import './Navbar.css'

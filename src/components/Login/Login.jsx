@@ -3,13 +3,11 @@ import './Login.css';
 const Login = () => {
     return (
         <div className ="login">
-            <h1>Login</h1>
+            <h1>StarDate</h1>
             <div className ="loginImg"></div>
-            <label>Login</label>
-            <input className ="loginName"></input>
-            <label>Password</label>
-            <input className ="loginPassword"></input>
-            <button>Log In</button>
+            <input className ="loginName" placeHolder="username"></input>
+            <input className ="loginPassword" placeHolder="password" type="password"></input>
+            <button id="buttonLogin" >connexion</button>
         </div>
     );
 }

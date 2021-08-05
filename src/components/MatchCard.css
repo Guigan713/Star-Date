@@ -1,26 +1,20 @@
-.cardContainer {
-    display : flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    margin-bottom: 50px;
-    margin: 10px;
+
+@property --rotate {
+    backgroundsyntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
 }
 
-.imageCard {
-    width: 450px;
-    margin-top: 50px;
-    border-radius: 9px;
+:root {
+    --card-height: 65vh;
+    --card-width: calc(var(--calc-height) / 1.5);
 }
 
-.card {
-    display : flex;
-    justify-content: center;
-    flex-direction: column;
-    border: 2px solid #000;
-    height: 350px; 
-    padding: 20px;
-    border-radius: 9px;
+h1 {
+    align-self: center;
+    animation: neonAnim 2s alternate-reverse infinite;
+    color: #F3F7FB;
+    font-family: cursive;
 }
 
 .cardInfos {
@@ -30,20 +24,315 @@
     flex-direction: column;
     font-size: 18px;
     margin: 3px;
+    animation: neonAnim 2s alternate-reverse infinite;
+    color: #F3F7FB;
 }
 
-h1 {
-    align-self: center;
+.cardContainer {
+    display : flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    margin: 10px;
 }
 
+.imageCard {
+    width: 450px;
+    margin-top: 50px;
+    border-radius: 9px;
+}
+
+/* Card Effect */
+
+.card {
+    background: #191c29;
+    width: var(--card-width);
+    height: var(--card-height);padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 6px;
+    font-size: 1.5em;
+    color: rgb(88 199 250 / 0%);
+    cursor: pointer;
+    height: 400px; background: #212534;
+    margin-top: 40px;
+}
+
+.card::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+        var(--rotate),
+        #5ddcff,
+        #3c67e3 43%,
+        #4e00c2
+    );
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+.card::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+        var(--rotate), 
+        #5ddcff,
+        #3c67e3 43%,
+        #4e00c2
+    );
+    opacity: 1;
+    transition: opacity 0.5s;
+    animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        --rotate: 0deg;
+    }
+    100% {
+        --rotate: 360deg;
+    }
+}
+
+.card p:nth-child(1) {
+    font-size: 12px;
+    color: #fff;
+    font-family: "Baloo Chettan 2", cursive;
+}
+
+.card:hover p:nth-child(1) {
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+p:nth-child(2) a:hover {
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0px 0px 5px #fff, 0px 0px 20px #614ad3;
+    }
+    to {
+        text-shadow: 0px 0px 2àpx #fff, 0px 0px 20px #614ad3;
+    }
+}
+
+@keyframes spin {
+    0% {
+        --rotate: 0deg;
+    }
+    100% {
+        --rotate: 360deg;
+    }
+}
+
+.card p:nth-child(1) {
+    word-break: break-all;
+    font-size: 12px;
+    color: #fff;
+    font-family: "Baloo Chettan 2", cursive;
+}
+
+.card:hover p:nth-child(1) {
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+p:nth-child(2) a {
+    font-size: 1em;
+    color: #228dff;
+    text-decoration: none;
+    transition: all 0.5s;
+    font-family: Iceland;
+}
+
+p:nth-child(2) a:hover {
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+    text-shadow: 0px 0px 5px #fff, 0px 0px 5px #614ad3;
+    }
+    to {
+        text-shadow: 0px 0px 20px #fff, 0px 0px 20px #614ad3;
+    }
+}
+
+
+/* Card Image effect */
+
+.imageCard {
+    background: #191c29;
+    width: var(--card-width);
+    height: var(--card-height);padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    border-radius: 6px;
+    font-size: 1.5em;
+    color: rgb(88 199 250 / 0%);
+    cursor: pointer;
+    height: 450px; background: #212534;
+}
+
+.imageCard::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+        var(--rotate),
+        #5ddcff,
+        #3c67e3 43%,
+        #4e00c2
+    );
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+.imageCard::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+        var(--rotate), 
+        #5ddcff,
+        #3c67e3 43%,
+        #4e00c2
+    );
+    opacity: 1;
+    transition: opacity 0.5s;
+    animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        --rotate: 0deg;
+    }
+    100% {
+        --rotate: 360deg;
+    }
+}
+
+.imageCard p:nth-child(1) {
+    font-size: 12px;
+    color: #fff;
+    font-family: "Baloo Chettan 2", cursive;
+}
+
+.imageCard:hover p:nth-child(1) {
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+p:nth-child(2) a:hover {
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0px 0px 5px #fff, 0px 0px 20px #614ad3;
+    }
+    to {
+        text-shadow: 0px 0px 2àpx #fff, 0px 0px 20px #614ad3;
+    }
+}
+
+@keyframes spin {
+    0% {
+        --rotate: 0deg;
+    }
+    100% {
+        --rotate: 360deg;
+    }
+}
+
+.imageCard p:nth-child(1) {
+    word-break: break-all;
+    font-size: 12px;
+    color: #fff;
+    font-family: "Baloo Chettan 2", cursive;
+}
+
+.imageCard:hover p:nth-child(1) {
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+p:nth-child(2) a {
+    font-size: 1em;
+    color: #228dff;
+    text-decoration: none;
+    transition: all 0.5s;
+    font-family: Iceland;
+}
+
+p:nth-child(2) a:hover {
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+    text-shadow: 0px 0px 5px #fff, 0px 0px 5px #614ad3;
+    }
+    to {
+        text-shadow: 0px 0px 20px #fff, 0px 0px 20px #614ad3;
+    }
+}
+
+
+
+/* Button */
 
 .buttonCard {
     width: 120px;
     font-size: 18px;
     border-radius: 6px;
     margin: 15px;
+    color: rgb(88 199 250);
+    animation: neonAnim 2s alternate-reverse infinite;
+    background: #191c29;
+    border: 2px solid #F3F7FB;
 }
 
 .button {
     align-self: center;
+}
+
+@media screen and (max-width: 680px) {
+    .cardContainer {
+        display : flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .card {
+        margin-top: 50px;
+        width: 80%;
+    }
 }
