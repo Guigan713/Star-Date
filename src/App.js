@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Login from './components/Login';
 import Swipe from './components/Swipe';
-
-import React from 'react';
+import Navbar from './components/Navbar/Navbar'
+import MatchCard from './components/MatchCard'
+import MessageCard from './components/MessageCard'
 
 
 import './App.css';
@@ -13,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-      {/* <Navbar/> */}
+       <Navbar />
       <Switch>
         <Route exact path="/">
           <Login />
@@ -24,15 +25,15 @@ function App() {
         {/* <Route path="/matches">
           <MatchList />
         </Route> */}
-        {/* <Route path="/matches/:id">
+        <Route path="/matches/:id">
           <MatchCard />
-        </Route> */}
+        </Route> 
         {/* <Route path="/messages">
           <MessageList />
         </Route> */}
-        {/* <Route path="/messages/:match">
+         <Route path="/messages/:match">
           <MessageCard />
-        </Route> */}
+        </Route> 
       </Switch>
     </Router>
     </div>
