@@ -48,7 +48,6 @@ const Swipe = () => {
     return (
         <div className ="swipe">
             {matchIdList.length > 0 && console.log("MyMatchList", matchIdList)}
-            <h1>Swipe</h1>
             {charList &&
                 charList
                 .filter( (char, index) => char.id === randomId)
