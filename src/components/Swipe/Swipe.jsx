@@ -9,6 +9,7 @@ const Swipe = () => {
     const [charList, setCharList] = useState([]);
     const [randomId, setRandomId] = useState("");
     const [matchIdList, setMatchIdList] = useState([]);
+    let myArray = null;
 
     useEffect(() => {
         // Get character list from API
@@ -27,7 +28,7 @@ const Swipe = () => {
     // Get a random number between 1 and 87
     const getANumber = () => {
         let randomInt = Math.floor(Math.random() * 87) + 1;
-            randomInt = 17 ? randomInt = Math.floor(Math.random() * 87) + 1 : setRandomId(randomInt); // Id 17 does not exist
+            randomInt === 17 ? randomInt = Math.floor(Math.random() * 87) + 1 : setRandomId(randomInt); // Id 17 does not exist
         setRandomId(randomInt)
     }
 
@@ -38,13 +39,17 @@ const Swipe = () => {
     
     // Response for Right click
     const handleRightClick = (e,id) => {
-        setMatchIdList([...matchIdList,id])
+        setMatchIdList([...matchIdList,id]) // add id to matchIdList
         getANumber()
     }
 
     return (
         <div className ="swipe">
-            {matchIdList.length > 0 && console.log("MyMatchList", matchIdList)}
+            {/* {matchIdList.length > 0 && console.log("MyMatchList", matchIdList)} */}
+            {/* {console.log("My matches", localStorage.getItem('matchIdList'))} */}
+
+            {// Save matchIdList in localStorage (be careful if you change PC)
+            localStorage.setItem('matchIdList', matchIdList)}
             <h1>Swipe</h1>
             {charList &&
                 charList
@@ -54,7 +59,7 @@ const Swipe = () => {
                         <div className = "characterImg">
                             <img src={char.image} alt={char.name}/>
                         </div>
-                        <div className = "characterName">{char.name}</div>
+                        <div className = "characterName">{char.id}{char.name}</div>
                         <div className="swipeBtn">
                             <button onClick={handleLeftClick}>Gauche</button>
                             <button onClick={(e)=>handleRightClick(e,char.id)}>Droite</button>
