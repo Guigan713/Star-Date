@@ -46,6 +46,7 @@ input:focus{
 }*/
 
 #buttonLogin {
+    width: 20%;
     margin: 10px;
     padding: 20px;
     background-color: #635BAC;
