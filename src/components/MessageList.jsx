@@ -2,7 +2,7 @@ import { React, useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import axios from 'axios'
 
-import MessageCard from './components/MessageCard'
+/*import MessageCard from './components/MessageCard' */
 
 const MessageList = () => {
     const [listMsg, setListMsg] =useState([]);
@@ -23,7 +23,7 @@ const MessageList = () => {
 
     return (
         <div className="matchListContainer">
-            <MessageCard name={listMsg}/>
+            
         </div>
     );
 }
