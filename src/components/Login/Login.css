@@ -3,26 +3,29 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 150px;
 }
 
-/*input{
-    width: 50%;
-    margin: 10px;
-}*/
+h1 {
+    font-size: 40px;
+    font-family: anakin_mono;
+    font-weight: bold;
+}
 
 input{
     width: 30vw;
     margin: 10px;
     padding: 20px;
-    background-color: #6C0EFE;
+    background-color: #635BAC;
     outline: none;
     border: none;
     border-radius: 10px;
     color: white;
     text-align: center;
-    font-size: 17px;
     text-transform: capitalize;
     transition: 0.2s;
+    font-family: anakin_mono;
+    font-size: 20px;
 
 }
 
@@ -32,9 +35,9 @@ input::placeholder{
 }
 input:focus{
     transition: 0.5s;
-    width: 40vw;
-    transform: scale(1.1);
-    box-shadow: 0px 0px 30px 2px  #a425f83f;
+    width: 30vw;
+    transform: scale(1);
+    box-shadow: 0px 0px 40px 4px  #a425f83f;
 }
 
 /*button{
@@ -43,16 +46,28 @@ input:focus{
 }*/
 
 button {
-    width: 10%;
+    width: 18%;
     margin: 10px;
     padding: 20px;
-    background-color: #6C0EFE;
+    background-color: #635BAC;
     outline: none;
     border: none;
     border-radius: 10px;
     color: white;
     text-align: center;
-    font-size: 17px;
+    font-size: 25px;
     text-transform: capitalize;
     transition: 0.2s;
+    color: gold;
+    font-family: anakin_mono;
+}
+
+@media screen and (max-width:680px) {
+    input {
+        width: 70%;
+    }
+
+    button {
+        width: 30%;
+    }
 }
