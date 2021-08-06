@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 
-
 import './MatchCard.css'
 
 const MatchCard = () => {
     const { id } = useParams();
     const [cardMatch, setCardMatch] = useState([]);
+    console.log(id)
 
     useEffect(() => {
         const getMatchCard = () => {
@@ -20,7 +20,7 @@ const MatchCard = () => {
                 })
         }
         getMatchCard()
-    }, [id])
+    }, [])
 
     return (
         <div className="cardContainer">

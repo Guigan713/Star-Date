@@ -23,12 +23,20 @@ const letMeIn = () => {
 	return (
 		<div className = "App">
 			<Router>
-				{/*{login && <Navbar />}
-				{!login && <Login />}*/}
-				
+				{/* {login && <Navbar />}
+				{!login && <Login />} */}
+				<Navbar />
 				<Switch>
-					{/* <Route exact path = "/">
-					</Route> */}
+					<Route exact path = "/">
+						<Login />
+						{!login &&
+							<Link to='/swipe'>
+								<div className = "loginBtnDiv">
+									<div id="buttonLogin" onClick={letMeIn}>connexion</div>
+								</div>
+							</Link>
+						}
+					</Route>
 					<Route path = "/profile">
 						<Profile />
 					</Route>
@@ -39,8 +47,8 @@ const letMeIn = () => {
 						<MatchCard />
 					</Route>
 					<Route path = "/matches">
-					<MatchList />
-						</Route>
+						<MatchList />
+					</Route>
 					{/* <Route path = "/messages">
 						<MessageList />
 					</Route> */}
@@ -48,15 +56,6 @@ const letMeIn = () => {
 						<MessageCard />
 					</Route> 
 				</Switch>
-				<div className="loginContainerB">
-				{!login &&
-					<Link to='/swipe'>
-						<div className = "loginBtnDiv">
-							<div id="buttonLogin" onClick={letMeIn}>connexion</div>
-						</div>
-					</Link>
-				}
-				</div>
 			</Router>
 		</div>
 	);
