@@ -11,6 +11,7 @@ import Swipe from './components/Swipe/Swipe';
 import './App.css';
 
 function App() {
+
 	return (
 		<div className = "App">
 			<Router>
@@ -35,6 +36,9 @@ function App() {
 				</Route> 
 			</Switch>
 			<Navbar />
+			{/* {localStorage.setItem('login', 'no')}
+			{console.log(localStorage.getItem('login'))}
+			{localStorage.getItem('login') === 'yes' ? <Navbar /> : null} */}
 		</Router>
 		</div>
 	);

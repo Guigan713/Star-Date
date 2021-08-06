@@ -29,11 +29,14 @@
     border-radius: 10px;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    background-color: transparent;
 }
 
 .characterImg img{
-    width: 95%;
-    height: 95%;
+    object-position: top;
+    width: 90%;
+    height: 90%;
     border-radius: 10px;
 }
 
