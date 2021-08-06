@@ -1,4 +1,4 @@
-.swipe{
+.swipe {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,6 +8,17 @@
     font-family: anakin_mono;
     color: gold;
     font-size: 20px;
+}
+
+.swipeBox {
+    border: 2px solid gold;
+    border-radius: 10px;
+}
+
+.swipeBox:hover {
+    transition: 0.5s;
+    transform: scale(1);
+    box-shadow: 0px 0px 40px 4px  #A5A00E;
 }
 
 .characterImg{
@@ -21,8 +32,8 @@
 }
 
 .characterImg img{
-    width: 90%;
-    height: 90%;
+    width: 95%;
+    height: 95%;
     border-radius: 10px;
 }
 
@@ -49,14 +60,6 @@ button {
     border-radius: 50px;
     border: 1px #954BC6;
 }
-
-
-/*button:focus{
-    transition: 0.5s;
-    width: 25%;
-    transform: scale(1);
-    box-shadow: 0px 0px 40px 4px  #954BC6;
-}*/
 
 img {
     width: 35px;
