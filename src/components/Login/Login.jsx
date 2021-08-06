@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import './Login.css';
 
 const Login = () => {
@@ -10,7 +9,6 @@ const Login = () => {
             <div className ="loginImg"></div>
             <input className ="loginName" placeholder="username"></input>
             <input className ="loginPassword" placeholder="password" type="password"></input>
-
         </div>
     );
 }

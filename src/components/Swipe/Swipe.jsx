@@ -1,8 +1,8 @@
 import { React, useState, useEffect } from "react";
 import axios from 'axios';
 
-import Cross from './times-solid.svg'
-import Heart from './heartbeat-solid.svg'
+import Cross from '../../assets/times-solid.svg'
+import Heart from '../../assets/heartbeat-solid.svg'
 
 import './Swipe.css';
 

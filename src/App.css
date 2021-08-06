@@ -24,3 +24,39 @@ body{
     background-image: linear-gradient(rgba(0, 5, 20, 0.5), rgba(223, 223, 179, 0.2)), url("../src/assets/background_star.PNG");
     height:100vh;
 }
+
+.loginBtnDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+}
+
+#buttonLogin {
+
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: 'anakin_mono';
+    text-transform: capitalize;
+    background-color: gold;
+    color: #635BAC;
+    opacity: 0.8;
+    border: none;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+#buttonLogin :hover{
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}

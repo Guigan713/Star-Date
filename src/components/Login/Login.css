@@ -2,6 +2,8 @@
     margin-top: 3vh;
     border-radius: 50%;
     width: 20vw;
+    min-width: 280px;
+    min-height: 280px;
     height: 20vw;
     background-color: grey;
     opacity: 0.5;
@@ -26,16 +28,17 @@
 }
 
 input{
-    width: 20vw;
+    width: 25vw;
+    min-width: 250px;
     margin: 10px;
-    padding: 20px 40px;
+    padding: 20px;
+    text-align: center;
     background-color: #635BAC;
     outline: none;
     border: none;
     border-radius: 10px;
     color: white;
     text-transform: capitalize;
-    text-align: center;
     transition: 0.2s;
     font-family: anakin_mono;
     font-size: 20px;
@@ -56,47 +59,17 @@ input:focus{
 }
 
 #buttonLogin {
-    margin: 20px;
-    padding: 20px;
-    font-family: 'anakin_mono';
-    background-color: gold;
-    border: none;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 24px;
-    text-transform: capitalize;
-    /* transition: 0.2s; */
-    color: #635BAC;
-    opacity: 0.8;
+    min-width: 100px;
+    margin: 15px 15vw;
 }
-
-a {
-    text-decoration: none;
-}
-
-#buttonLogin :hover{
-    cursor: pointer;
-}
-
-.secretBtn{
-    color: grey;
-    margin: 30px;
-    width: 20px;
-    height: 20px;
-}
-
-.secretBtn{
-    cursor: pointer;
-}
-
-#buttonLogin:focus {
+/* #buttonLogin:focus {
     transition: 0.5s;
     width: 30vw;
     transform: scale(1);
     box-shadow: 0px 0px 40px 4px  #954BC6;
-}
+} */
 
-@media screen and (max-width:680px) {
+/* @media screen and (max-width:680px) {
     input {
         width: 70%;
     }
@@ -105,4 +78,4 @@ a {
         width: 50%;
     }
 
-}
+} */
