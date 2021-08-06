@@ -8,8 +8,9 @@ import './MatchList.css'
 
 const MatchList = () => {
 
-    const myMatches = "[" + localStorage.getItem('matchIdList') + "]"
-    // console.log("myMatches", myMatches)
+    const myMatches = JSON.parse(localStorage.getItem('matchIdList'));
+    // const myMatches = (localStorage.getItem('matchIdList'));
+    console.log("myMatches", myMatches)
     const [matchList, setMatchList] =useState([]);
 
     useEffect(() => {
