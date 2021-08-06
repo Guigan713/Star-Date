@@ -23,8 +23,9 @@ const letMeIn = () => {
 	return (
 		<div className = "App">
 			<Router>
-				{login && <Navbar />}
-				{!login && <Login />}
+				{/*{login && <Navbar />}
+				{!login && <Login />}*/}
+				
 				<Switch>
 					{/* <Route exact path = "/">
 					</Route> */}
@@ -34,12 +35,12 @@ const letMeIn = () => {
 					<Route path = "/swipe">
 						<Swipe />
 					</Route>
-					<Route path = "/matches">
-					<MatchList />
-						</Route>
 					<Route path = "/matches/:id">
 						<MatchCard />
 					</Route>
+					<Route path = "/matches">
+					<MatchList />
+						</Route>
 					{/* <Route path = "/messages">
 						<MessageList />
 					</Route> */}
