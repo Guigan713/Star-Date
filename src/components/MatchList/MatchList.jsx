@@ -2,17 +2,16 @@ import { React, useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import axios from 'axios'
 
-
-
-
 const MatchList = () => {
-    const [listMatch, setListMatch] =useState([]);
-    const { id } = useParams();
 
+    const myMatches = "[" + localStorage.getItem('matchIdList') + "]"
+    console.log(myMatches)
+
+    const [listMatch, setListMatch] =useState([]);
     useEffect(() => {
         const getMatchList = () => {
 
-            axios.get(`https://miadil.github.io/starwars-api/api/id/${id}.json`)
+            axios.get(`https://miadil.github.io/starwars-api/api/all.json`)
             .then(response => response.data)
             .then(data => {
                 console.log(data)
@@ -20,11 +19,11 @@ const MatchList = () => {
             })
         }
         getMatchList()
-    }, [id])
+    }, [])
 
     return (
         <div className="matchListContainer">
-           
+           <h2>Coucou</h2>
         </div>
     );
 }
