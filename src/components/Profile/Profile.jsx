@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
+import Men from '../../assets/men.png'
+import Women from '../../assets/women.png'
+
 import './Profile.css'
 
 const Profile = () => {
@@ -12,7 +15,7 @@ const Profile = () => {
                 .get(`https://miadil.github.io/starwars-api/api/id/88.json`)
                 .then(response => response.data)
                 .then(data => {
-                    console.log(data)
+                    // console.log(data)
                     setProfile(data);
                 })
         }
@@ -37,9 +40,18 @@ const Profile = () => {
                 </div>
                 <div className = "myResearch">
                     <h1 >My research</h1>
-                    <div className = "criteria">gender</div>
+                    <div className = "criteria">
+                        <div className = "critTitle">Gender</div>
+                        <div className = "genre">
+                            <div><img className = "genreImg" src={Men} alt="men"/></div>
+                            <div></div>
+                            <div><img className = "genreImg" src={Women} alt="women"/></div>
+                        </div>
+                    </div>
                     <div className = "criteria">height</div>
+                        <div></div>
                     <div className = "criteria">mass</div>
+                        <div></div>
                 </div>
             </div>
         </div>

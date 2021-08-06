@@ -18,7 +18,7 @@ const Login = () => {
                 </div>
             </div>
             <div className ="loginImg"></div>
-            <input className ="loginName" placeholder="username"></input>
+            <input className ="loginName" placeholder="username" ></input>
             <input className ="loginPassword" placeholder="password" type="password"></input>
         </div>
     );

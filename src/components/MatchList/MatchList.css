@@ -5,6 +5,12 @@
     padding: 20px;
 }
 
+.matchListContainer h1{
+    justify-content: center;
+    text-align: center;
+    font-size: 42px;
+}
+
 .matchBox {
     border-radius: 10px;
     border: 1px solid gold;

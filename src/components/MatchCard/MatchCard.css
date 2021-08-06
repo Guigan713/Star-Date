@@ -322,6 +322,10 @@ p:nth-child(2) a:hover {
     border: 2px solid #F3F7FB;
 }
 
+.buttonCard img{
+    margin-top: 5px;
+}
+
 .button {
     align-self: center;
 }

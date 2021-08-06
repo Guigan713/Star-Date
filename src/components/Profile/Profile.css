@@ -64,5 +64,23 @@
     font-size: 25px;
 }
 
+.critTitle{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.genre{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+
+.genreImg {
+    width: 100px;
+}
+
 
 

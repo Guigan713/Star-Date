@@ -21,7 +21,7 @@ const MessageCard = () => {
 
     return (
         <div className="matchListContainer">
-             <h2>Test</h2>
+            <h2>In progress...</h2>
         </div>
     );
 }

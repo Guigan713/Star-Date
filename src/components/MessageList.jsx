@@ -2,7 +2,7 @@ import { React, useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom';
 
-import Message from './message.svg'
+import Message from '../assets/message.svg'
 
 import './MessageList.css'
 
@@ -17,7 +17,7 @@ const MessageList = () => {
             axios.get(`https://miadil.github.io/starwars-api/api/all.json`)
             .then(response => response.data)
             .then(data => {
-                console.log(data)
+                // console.log(data)
                 setMessageList(data);
             })
         }
