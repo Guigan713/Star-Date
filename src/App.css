@@ -75,3 +75,18 @@ a {
 
 }
 
+@media screen and (max-width:680px) {
+    #buttonLogin {
+        min-width: 100px;
+        margin: 15px 15vw;
+    }
+        input {
+            width: 70%;
+        }
+    
+        #buttonLogin {
+            width: 40vw;
+        }
+    
+    } 
+
