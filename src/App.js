@@ -47,12 +47,13 @@ const letMeIn = () => {
 						<MessageCard />
 					</Route> 
 				</Switch>
+				<div className="loginContainerB">
 				{!login &&
 					<Link to='/swipe'>
 						<div id="buttonLogin" onClick={letMeIn}>connexion</div>
 					</Link>
 				}
-			
+				</div>
 			</Router>
 		</div>
 	);
