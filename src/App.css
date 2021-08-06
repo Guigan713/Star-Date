@@ -25,6 +25,27 @@ body{
     height:100vh;
 }
 
+
+#buttonLogin {
+    width: 15vw;
+    margin: 10px;
+    padding: 20px;
+    font-family: 'anakin_mono';
+    background-color: #635BAC;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 24px;
+    text-transform: capitalize;
+    /* transition: 0.2s; */
+    color: gold;
+    opacity: 0.8;
+}
+
+a {
+    text-decoration: none;
+}
+
 .loginBtnDiv{
     display: flex;
     flex-direction: row;
@@ -32,31 +53,40 @@ body{
     padding: 10px;
 }
 
-#buttonLogin {
-
-    padding: 20px;
-    width: 200px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    font-family: 'anakin_mono';
-    text-transform: capitalize;
-    background-color: gold;
-    color: #635BAC;
-    opacity: 0.8;
-    border: none;
-    border-radius: 10px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-}
-
 #buttonLogin :hover{
     cursor: pointer;
 }
 
-a {
-    text-decoration: none;
+
+.secretBtn{
+    color: grey;
+    margin: 30px;
+    width: 20px;
+    height: 20px;
 }
+
+.secretBtn{
+    cursor: pointer;
+} 
+
+.loginContainerB {
+    display: flex;
+    justify-content: center;
+
+}
+
+@media screen and (max-width:680px) {
+    #buttonLogin {
+        min-width: 100px;
+        margin: 15px 15vw;
+    }
+        input {
+            width: 70%;
+        }
+    
+        #buttonLogin {
+            width: 40vw;
+        }
+    
+    } 
+

@@ -1,5 +1,5 @@
 .logo{
-    margin-top: 3vh;
+    margin-top: 10vh;
     border-radius: 50%;
     width: 20vw;
     min-width: 280px;
@@ -20,7 +20,7 @@
     font-size: 40px;
     font-family: 'anakin_mono';
     font-weight: bold;
-    margin-top: -100px;
+    margin-top: -140px;
 }
 
 .loginName{
@@ -57,25 +57,3 @@ input:focus{
     transform: scale(1);
     box-shadow: 0px 0px 40px 4px  #954BC6;
 }
-
-#buttonLogin {
-    min-width: 100px;
-    margin: 15px 15vw;
-}
-/* #buttonLogin:focus {
-    transition: 0.5s;
-    width: 30vw;
-    transform: scale(1);
-    box-shadow: 0px 0px 40px 4px  #954BC6;
-} */
-
-/* @media screen and (max-width:680px) {
-    input {
-        width: 70%;
-    }
-
-    #buttonLogin {
-        width: 50%;
-    }
-
-} */
