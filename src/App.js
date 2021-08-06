@@ -5,6 +5,7 @@ import Login from './components/Login/Login';
 import MatchCard from './components/MatchCard'
 import MatchList from './components/MatchList/MatchList'
 import MessageCard from './components/MessageCard'
+import MessageList from './components/MessageList'
 import Navbar from './components/Navbar/Navbar'
 import Profile from './components/Profile/Profile';
 import Swipe from './components/Swipe/Swipe';
@@ -25,7 +26,6 @@ const letMeIn = () => {
 			<Router>
 				{/* {login && <Navbar />}
 				{!login && <Login />} */}
-				<Navbar />
 				<Switch>
 					<Route exact path = "/">
 						<Login />
@@ -49,13 +49,14 @@ const letMeIn = () => {
 					<Route path = "/matches">
 						<MatchList />
 					</Route>
-					{/* <Route path = "/messages">
+					<Route path = "/messages">
 						<MessageList />
-					</Route> */}
+					</Route> 
 					<Route path = "/messages/:match">
 						<MessageCard />
 					</Route> 
 				</Switch>
+				<Navbar />
 			</Router>
 		</div>
 	);

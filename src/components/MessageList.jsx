@@ -1,30 +1,49 @@
 import { React, useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom';
 import axios from 'axios'
+import { Link } from 'react-router-dom';
 
-/*import MessageCard from './components/MessageCard' */
+import Message from './message.svg'
+
+import './MessageList.css'
 
 const MessageList = () => {
-    const [listMsg, setListMsg] =useState([]);
-    const { id } = useParams();
+
+    const myMatches = "[" + localStorage.getItem('matchIdList') + "]"
+    // console.log("myMatches", myMatches)
+    const [messageList, setMessageList] =useState([]);
 
     useEffect(() => {
         const getMessageList = () => {
-
-            axios.get(`https://miadil.github.io/starwars-api/api/id/${id}.json`)
+            axios.get(`https://miadil.github.io/starwars-api/api/all.json`)
             .then(response => response.data)
             .then(data => {
                 console.log(data)
-                setListMsg(data);
+                setMessageList(data);
             })
         }
         getMessageList()
-    }, [id])
+    }, [])
 
     return (
-        <div className="matchListContainer">
-            
-        </div>
+        <div className ="messageListContainer">
+        {messageList &&
+            messageList
+            .filter( (match, index) => myMatches.includes(match.id))
+            .map( (match, index) =>
+                <div className="messageBox" key={index}>
+                    <div className = "messageListImg">
+                        <img src={match.image} alt={match.name}/>
+                    </div>
+                    <Link to={`/matches/${match.id}`}>
+                    <div className = "matchListName">{match.name}</div>
+                    </Link>
+                    <Link to={`/messages/${match.id}`}>
+                    <img src={Message} alt="message box"></img>
+                    </Link>
+                </div>
+                )
+            }
+            </div>
     );
 }
 
