@@ -37,7 +37,7 @@ input:focus{
     transition: 0.5s;
     width: 30vw;
     transform: scale(1);
-    box-shadow: 0px 0px 40px 4px  #a425f83f;
+    box-shadow: 0px 0px 40px 4px  #954BC6;
 }
 
 /*button{
@@ -46,7 +46,7 @@ input:focus{
 }*/
 
 #buttonLogin {
-    width: 18%;
+    width: 20%;
     margin: 10px;
     padding: 20px;
     background-color: #635BAC;
@@ -62,12 +62,20 @@ input:focus{
     font-family: anakin_mono;
 }
 
+#buttonLogin:focus {
+    transition: 0.5s;
+    width: 30vw;
+    transform: scale(1);
+    box-shadow: 0px 0px 40px 4px  #954BC6;
+}
+
 @media screen and (max-width:680px) {
     input {
         width: 70%;
     }
 
-    button {
-        width: 30%;
+    #buttonLogin {
+        width: 50%;
     }
+
 }

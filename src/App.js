@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Login from './components/Login/Login';
 import MatchCard from './components/MatchCard'
+import MatchList from './components/MatchList'
 import MessageCard from './components/MessageCard'
 import Navbar from './components/Navbar/Navbar'
 import Swipe from './components/Swipe/Swipe';
@@ -21,9 +22,9 @@ function App() {
 				<Route path = "/swipe">
 					<Swipe />
 				</Route>
-				{/* <Route path = "/matches">
+				<Route path = "/matches">
 				<MatchList />
-					</Route> */}
+					</Route> 
 				<Route path = "/matches/:id">
 					<MatchCard />
 				</Route>

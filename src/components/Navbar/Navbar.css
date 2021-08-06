@@ -16,3 +16,12 @@
     padding: 5px;
     margin: 5px;
 }
+
+@media screen and (max-width: 680px) {
+    .navContainer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 15px;
+    }
+}
