@@ -6,7 +6,7 @@
     height: 50px;
     background: transparent;
     margin: 20px;
-    position: relative;
+    position: fixed;
     bottom: 0;
 }
 
