@@ -74,7 +74,8 @@ input:focus{
         width: 70%;
     }
 
-    button {
-        width: 30%;
+    #buttonLogin {
+        width: 50%;
     }
+
 }
