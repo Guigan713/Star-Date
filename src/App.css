@@ -25,6 +25,7 @@ body{
     height:100vh;
 }
 
+
 #buttonLogin {
     width: 15vw;
     margin: 10px;
@@ -45,9 +46,17 @@ a {
     text-decoration: none;
 }
 
+.loginBtnDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+}
+
 #buttonLogin :hover{
     cursor: pointer;
 }
+
 
 .secretBtn{
     color: grey;
@@ -65,3 +74,4 @@ a {
     justify-content: center;
 
 }
+
