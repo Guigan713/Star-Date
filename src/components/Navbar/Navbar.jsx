@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import Fire from '../../assets/fire-solid.svg'
-import Coeur from '../../assets/love.svg'
+import Fire from '../../assets/astro.svg'
+import Coeur from '../../assets/heart-solid.svg'
 import Inbox from '../../assets/message.svg'
 import Star from '../../assets/star-regular.svg'
 
