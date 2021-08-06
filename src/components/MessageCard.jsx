@@ -21,7 +21,10 @@ const MessageCard = () => {
 
     return (
         <div className="matchListContainer">
-             <h2>Test</h2>
+             <h2>{cardMessage.name}</h2>
+             <div>
+                 
+             </div>
         </div>
     );
 }
