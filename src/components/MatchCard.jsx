@@ -20,7 +20,7 @@ const MatchCard = () => {
                 })
         }
         getMatchCard()
-    }, [])
+    }, [id])
 
     return (
         <div className="cardContainer">

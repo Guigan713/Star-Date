@@ -34,8 +34,10 @@ const MatchList = () => {
                     <div className = "matchListImg">
                         <img src={match.image} alt={match.name}/>
                     </div>
+                    <Link to={`/matches/${match.id}`}>
                     <div className = "matchListName">{match.name}</div>
-                    <Link to="/messages/:match">
+                    </Link>
+                    <Link to={`/messages/${match.id}`}>
                     <img src={Message} alt="message box"></img>
                     </Link>
                 </div>
