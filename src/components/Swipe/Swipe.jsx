@@ -51,7 +51,7 @@ const Swipe = () => {
             {/* {console.log("My matches", localStorage.getItem('matchIdList'))} */}
 
             {// Save matchIdList in localStorage (be careful if you change PC)
-            localStorage.setItem('matchIdList', matchIdList)}
+            localStorage.setItem('matchIdList', JSON.stringify(matchIdList))}
             {/* <h1>Swipe</h1> */}
             {charList &&
                 charList
