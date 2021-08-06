@@ -2,7 +2,7 @@ import React , { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
 import Login from './components/Login/Login';
-import MatchCard from './components/MatchCard'
+import MatchCard from './components/MatchCard/MatchCard'
 import MatchList from './components/MatchList/MatchList'
 import MessageCard from './components/MessageCard'
 import MessageList from './components/MessageList'
@@ -17,7 +17,7 @@ function App() {
 const [login, setLogin] = useState(false)
 
 const letMeIn = () => {
-	console.log("let me in", login)
+	// console.log("let me in", login)
 	setLogin(true)
 }
 
@@ -31,7 +31,7 @@ const letMeIn = () => {
 					<Route exact path = "/">
 						<Login />
 						{!login &&
-							<Link to='/swipe'>
+							<Link to='/profile'>
 								<div className = "loginBtnDiv">
 									<div id="buttonLogin" onClick={letMeIn}>connexion</div>
 								</div>

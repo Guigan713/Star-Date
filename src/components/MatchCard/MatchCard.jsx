@@ -2,12 +2,14 @@ import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 
+import Bubble from '../../assets/message.svg'
+
 import './MatchCard.css'
 
 const MatchCard = () => {
     const { id } = useParams();
     const [cardMatch, setCardMatch] = useState([]);
-    console.log(id)
+    // console.log(id)
 
     useEffect(() => {
         const getMatchCard = () => {
@@ -15,7 +17,7 @@ const MatchCard = () => {
                 .get(`https://miadil.github.io/starwars-api/api/id/${id}.json`)
                 .then(response => response.data)
                 .then(data => {
-                    console.log(data)
+                    // console.log(data)
                     setCardMatch(data);
                 })
         }
@@ -34,7 +36,7 @@ const MatchCard = () => {
             <p className="cardInfos">eye color: {cardMatch.eyeColor}</p>
             <p className="cardInfos">skin color: {cardMatch.skinColor}</p>
             <Link to={`/messages/${cardMatch.id}`} className="button">
-                <button className="buttonCard">send a message</button>
+                <button className="buttonCard">send a message <img src={Bubble} alt="bubble"/></button>
             </Link>
             </div>
         </div>

@@ -9,8 +9,7 @@ import './MatchList.css'
 const MatchList = () => {
 
     const myMatches = JSON.parse(localStorage.getItem('matchIdList'));
-    // const myMatches = (localStorage.getItem('matchIdList'));
-    console.log("myMatches", myMatches)
+    // console.log("myMatches", myMatches)
     const [matchList, setMatchList] =useState([]);
 
     useEffect(() => {
@@ -18,7 +17,7 @@ const MatchList = () => {
             axios.get(`https://miadil.github.io/starwars-api/api/all.json`)
             .then(response => response.data)
             .then(data => {
-                console.log(data)
+                // console.log(data)
                 setMatchList(data);
             })
         }
@@ -27,6 +26,7 @@ const MatchList = () => {
 
     return (
         <div className ="matchListContainer">
+        <h1>My matches</h1>
         {matchList &&
             matchList
             .filter( (match, index) => myMatches.includes(match.id))

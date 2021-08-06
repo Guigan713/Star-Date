@@ -7,11 +7,32 @@ import Heart from '../../assets/heartbeat-solid.svg'
 import './Swipe.css';
 
 const Swipe = () => {
-
+    
     // Initial State
     const [charList, setCharList] = useState([]);
     const [randomId, setRandomId] = useState("");
     const [matchIdList, setMatchIdList] = useState([]);
+    
+    // Get a random number between 1 and 87
+    const getANumber = () => {
+        let randomInt = Math.floor(Math.random() * 87) + 1;
+            randomInt === 17 ? randomInt = Math.floor(Math.random() * 87) + 1 : setRandomId(randomInt); // Id 17 does not exist
+        setRandomId(randomInt)
+    }
+    
+    // Response for Left click
+    const handleLeftClick = () => {
+        getANumber()
+    }
+    
+    // Response for Right click
+    const handleRightClick = (e,id) => {
+        setMatchIdList([...matchIdList,id]) // add id to matchIdList
+        getANumber()
+    }
+
+    useEffect(() => {getANumber()}, [])
+
 
     useEffect(() => {
         // Get character list from API
@@ -27,23 +48,6 @@ const Swipe = () => {
         getCharList()
     }, [randomId])
 
-    // Get a random number between 1 and 87
-    const getANumber = () => {
-        let randomInt = Math.floor(Math.random() * 87) + 1;
-            randomInt === 17 ? randomInt = Math.floor(Math.random() * 87) + 1 : setRandomId(randomInt); // Id 17 does not exist
-        setRandomId(randomInt)
-    }
-
-    // Response for Left click
-    const handleLeftClick = () => {
-        getANumber()
-    }
-    
-    // Response for Right click
-    const handleRightClick = (e,id) => {
-        setMatchIdList([...matchIdList,id]) // add id to matchIdList
-        getANumber()
-    }
 
     return (
         <div className ="swipe">
@@ -69,7 +73,7 @@ const Swipe = () => {
                     </div>
                     )
                 }
-            <button className="startBtn" onClick={handleLeftClick}>Start</button>
+            {/* <button className="startBtn" onClick={handleLeftClick}>Start</button> */}
         </div>
     );
 }
