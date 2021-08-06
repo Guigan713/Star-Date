@@ -57,7 +57,7 @@ const Swipe = () => {
                 charList
                 .filter( (char, index) => char.id === randomId)
                 .map( (char, index) =>
-                    <div key={index}>
+                    <div className="swipeBox" key={index}>
                         <div className = "characterImg">
                             <img src={char.image} alt={char.name}/>
                         </div>
@@ -66,6 +66,7 @@ const Swipe = () => {
                             <button onClick={handleLeftClick}><img src={Cross} alt="croix"></img></button>
                             <button onClick={(e)=>handleRightClick(e,char.id)}><img src={Heart} alt="coeur"></img></button>
                         </div>
+                        <div className = "characterName">{char.name}</div>
                     </div>
                     )
                 }
@@ -73,5 +74,6 @@ const Swipe = () => {
         </div>
     );
 }
+
 
 export default Swipe;

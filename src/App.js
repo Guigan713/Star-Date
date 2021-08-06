@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
 import Login from './components/Login/Login';
 import MatchCard from './components/MatchCard'
+import MatchList from './components/MatchList'
 import MessageCard from './components/MessageCard'
 import Navbar from './components/Navbar/Navbar'
 import Profile from './components/Profile/Profile';

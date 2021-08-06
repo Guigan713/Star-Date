@@ -52,11 +52,16 @@ input:focus{
     width: 20vw;
     font-size: 20px;
     transform: scale(1);
-    box-shadow: 0px 0px 40px 4px  #a425f83f;
+    box-shadow: 0px 0px 40px 4px  #954BC6;
 }
 
 #buttonLogin {
+<<<<<<< HEAD
     margin: 20px;
+=======
+    width: 20%;
+    margin: 10px;
+>>>>>>> dev
     padding: 20px;
     font-family: 'anakin_mono';
     background-color: gold;
@@ -89,12 +94,20 @@ a {
     cursor: pointer;
 }
 
+#buttonLogin:focus {
+    transition: 0.5s;
+    width: 30vw;
+    transform: scale(1);
+    box-shadow: 0px 0px 40px 4px  #954BC6;
+}
+
 @media screen and (max-width:680px) {
     input {
         width: 70%;
     }
 
-    button {
-        width: 30%;
+    #buttonLogin {
+        width: 50%;
     }
+
 }
