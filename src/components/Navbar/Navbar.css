@@ -6,6 +6,7 @@
     height: 50px;
     background: transparent;
     margin: 20px;
+    position: absolute;
 }
 
 .buttonLogo {
