@@ -49,11 +49,11 @@ const letMeIn = () => {
 					<Route path = "/matches">
 						<MatchList />
 					</Route>
-					<Route path = "/messages">
-						<MessageList />
-					</Route> 
 					<Route path = "/messages/:match">
 						<MessageCard />
+					</Route> 
+					<Route path = "/messages">
+						<MessageList />
 					</Route> 
 				</Switch>
 				<Navbar />
