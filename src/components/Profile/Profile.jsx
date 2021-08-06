@@ -51,12 +51,12 @@ const Profile = () => {
                     </div>
 
                     <div className = "criteria">
-                        <div className = "critTitle">Height</div>
+                        <div className = "critTitle">Species</div>
                         <p>in progress...</p>
                     </div>
 
                     <div className = "criteria">
-                        <div className = "critTitle">Mass</div>
+                        <div className = "critTitle">Geolocalisation</div>
                         <p>in progress...</p>
                     </div>
                 </div>

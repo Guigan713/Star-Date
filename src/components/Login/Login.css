@@ -27,7 +27,24 @@
     margin-top: 30px;
 }
 
-input{
+.loginName{
+    width: 25vw;
+    min-width: 250px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: #635BAC;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    text-transform: capitalize;
+    transition: 0.2s;
+    font-family: anakin_mono;
+    font-size: 20px;
+}
+
+.loginPassword{
     width: 25vw;
     min-width: 250px;
     margin: 10px;

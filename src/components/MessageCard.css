@@ -1,0 +1,49 @@
+.msgcontact{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.msgcontact h2{
+    color: yellow;
+    margin-left: 30px;
+}
+
+.msgRight{
+    text-align: right;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.msgLeft{
+    justify-content: left;
+    padding: 20px;
+    font-size: 20px;
+    color: white;
+}
+
+.chat{
+    position: absolute;
+    width: 90%;
+    Height: 50px;
+    justify-content: right;
+    border-radius: 15px;
+    bottom: 0px;
+}
+
+.blabla{
+    display:flex;
+    flex-direction: row;
+}
+/* 
+.send{
+    position: fixed;
+    float: right;
+    width: 10%;
+    Height: 50px;
+    justify-content: right;
+    text-align: center;
+    margin: 20px;
+    background-color: violet;
+} */
