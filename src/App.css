@@ -40,6 +40,7 @@ body{
     /* transition: 0.2s; */
     color: gold;
     opacity: 0.8;
+    margin-bottom: 70px;
 }
 
 a {
@@ -51,7 +52,7 @@ a {
     flex-direction: row;
     justify-content: center;
     padding: 10px;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
 }
 
 #buttonLogin :hover{

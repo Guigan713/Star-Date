@@ -26,6 +26,7 @@ const letMeIn = () => {
 			<Router>
 				{/* {login && <Navbar />}
 				{!login && <Login />} */}
+				<Navbar />
 				<Switch>
 					<Route exact path = "/">
 						<Login />
@@ -56,7 +57,6 @@ const letMeIn = () => {
 						<MessageList />
 					</Route> 
 				</Switch>
-				<Navbar />
 			</Router>
 		</div>
 	);
