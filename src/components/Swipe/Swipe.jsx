@@ -53,7 +53,6 @@ const Swipe = () => {
 
             {// Save matchIdList in localStorage (be careful if you change PC)
             localStorage.setItem('matchIdList', matchIdList)}
-            <h1>Swipe</h1>
             {charList &&
                 charList
                 .filter( (char, index) => char.id === randomId)
@@ -62,7 +61,6 @@ const Swipe = () => {
                         <div className = "characterImg">
                             <img src={char.image} alt={char.name}/>
                         </div>
-                        <div className = "characterName">{char.id}{char.name}</div>
                         <div className="swipeBtn">
                             <button onClick={handleLeftClick}><img src={Cross} alt="croix"></img></button>
                             <button onClick={(e)=>handleRightClick(e,char.id)}><img src={Heart} alt="coeur"></img></button>
