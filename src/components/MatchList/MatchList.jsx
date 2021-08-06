@@ -37,7 +37,7 @@ const MatchList = () => {
                     <Link to={`/matches/${match.id}`}>
                     <div className = "matchListName">{match.name}</div>
                     </Link>
-                    <Link to="/messages/:match">
+                    <Link to={`/messages/${match.id}`}>
                     <img src={Message} alt="message box"></img>
                     </Link>
                 </div>
