@@ -61,7 +61,9 @@
     font-family: 'anakin_mono';
     color: #F3F7FB;
     border: yellow 1px solid;
+    border-radius: 30px;
     font-size: 25px;
+    padding: 10px;
 }
 
 .critTitle{

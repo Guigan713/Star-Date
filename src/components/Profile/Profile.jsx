@@ -40,6 +40,7 @@ const Profile = () => {
                 </div>
                 <div className = "myResearch">
                     <h1 >My research</h1>
+
                     <div className = "criteria">
                         <div className = "critTitle">Gender</div>
                         <div className = "genre">
@@ -48,10 +49,16 @@ const Profile = () => {
                             <div><img className = "genreImg" src={Women} alt="women"/></div>
                         </div>
                     </div>
-                    <div className = "criteria">height</div>
-                        <div></div>
-                    <div className = "criteria">mass</div>
-                        <div></div>
+
+                    <div className = "criteria">
+                        <div className = "critTitle">Height</div>
+                        <p>in progress...</p>
+                    </div>
+
+                    <div className = "criteria">
+                        <div className = "critTitle">Mass</div>
+                        <p>in progress...</p>
+                    </div>
                 </div>
             </div>
         </div>
