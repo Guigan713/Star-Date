@@ -12,7 +12,6 @@ const Swipe = () => {
     const [charList, setCharList] = useState([]);
     const [randomId, setRandomId] = useState("");
     const [matchIdList, setMatchIdList] = useState([]);
-    let myArray = null;
 
     useEffect(() => {
         // Get character list from API
@@ -53,7 +52,7 @@ const Swipe = () => {
 
             {// Save matchIdList in localStorage (be careful if you change PC)
             localStorage.setItem('matchIdList', matchIdList)}
-            <h1>Swipe</h1>
+            {/* <h1>Swipe</h1> */}
             {charList &&
                 charList
                 .filter( (char, index) => char.id === randomId)

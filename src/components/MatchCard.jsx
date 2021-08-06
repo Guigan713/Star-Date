@@ -1,13 +1,13 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import axios from 'axios'
+import axios from 'axios';
 
 
 import './MatchCard.css'
 
 const MatchCard = () => {
     const { id } = useParams();
-    const [cardMatch, setCardMatch] =useState([]);
+    const [cardMatch, setCardMatch] = useState([]);
 
     useEffect(() => {
         const getMatchCard = () => {
