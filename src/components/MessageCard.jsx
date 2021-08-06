@@ -9,7 +9,7 @@ const MessageCard = () => {
     useEffect(() => {
         const getMessageCard = () => {
 
-            axios.get(`https://miadil.github.io/starwars-api/api/id/${id}.json`)
+            axios.get(`https://miadil.github.io/starwars-api/api/id/all.json`)
             .then(response => response.data)
             .then(data => {
                 console.log(data)
@@ -21,9 +21,10 @@ const MessageCard = () => {
 
     return (
         <div className="matchListContainer">
+            <img src={cardMessage.image} alt={cardMessage.name}></img>
              <h2>{cardMessage.name}</h2>
              <div>
-                 
+
              </div>
         </div>
     );
