@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
 import Login from './components/Login/Login';
 import MatchCard from './components/MatchCard'
-import MatchList from './components/MatchList'
+import MatchList from './components/MatchList/MatchList'
 import MessageCard from './components/MessageCard'
 import Navbar from './components/Navbar/Navbar'
 import Profile from './components/Profile/Profile';
@@ -23,8 +23,8 @@ const letMeIn = () => {
 	return (
 		<div className = "App">
 			<Router>
-						{login && <Navbar />}
-						{!login && <Login />}
+				{login && <Navbar />}
+				{!login && <Login />}
 				<Switch>
 					{/* <Route exact path = "/">
 					</Route> */}
@@ -34,9 +34,9 @@ const letMeIn = () => {
 					<Route path = "/swipe">
 						<Swipe />
 					</Route>
-					{/* <Route path = "/matches">
+					<Route path = "/matches">
 					<MatchList />
-						</Route> */}
+						</Route>
 					<Route path = "/matches/:id">
 						<MatchCard />
 					</Route>
@@ -49,7 +49,9 @@ const letMeIn = () => {
 				</Switch>
 				{!login &&
 					<Link to='/swipe'>
-						<div id="buttonLogin" onClick={letMeIn}>connexion</div>
+						<div className = "loginBtnDiv">
+							<div id="buttonLogin" onClick={letMeIn}>connexion</div>
+						</div>
 					</Link>
 				}
 			
