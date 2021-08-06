@@ -11,7 +11,7 @@ import './Navbar.css'
 const Navbar = () => {
     return (
         <div className="navContainer">
-            <NavLink to="/">
+            <NavLink to="/profile">
                 <img className="buttonLogo" src={Fire} alt="login" />
             </NavLink>
             <NavLink to="/swipe">
