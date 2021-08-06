@@ -56,12 +56,7 @@ input:focus{
 }
 
 #buttonLogin {
-<<<<<<< HEAD
     margin: 20px;
-=======
-    width: 20%;
-    margin: 10px;
->>>>>>> dev
     padding: 20px;
     font-family: 'anakin_mono';
     background-color: gold;
