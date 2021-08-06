@@ -2,6 +2,8 @@ import { React, useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom';
 
+import Message from './message.svg'
+
 import './MessageList.css'
 
 const MessageList = () => {
@@ -32,8 +34,9 @@ const MessageList = () => {
                     <div className = "messageListImg">
                         <img src={match.image} alt={match.name}/>
                     </div>
-                    <Link to="/messages/:match">
                     <div className = "messageListName">{match.name}</div>
+                    <Link to="/messages/:match">
+                    <img src={Message} alt="message box"></img>
                     </Link>
                 </div>
                 )
