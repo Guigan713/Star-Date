@@ -47,6 +47,7 @@ const letMeIn = () => {
 						<MessageCard />
 					</Route> 
 				</Switch>
+				<div className="loginContainerB">
 				{!login &&
 					<Link to='/swipe'>
 						<div className = "loginBtnDiv">
@@ -54,7 +55,7 @@ const letMeIn = () => {
 						</div>
 					</Link>
 				}
-			
+				</div>
 			</Router>
 		</div>
 	);
